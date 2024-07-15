@@ -90,9 +90,9 @@ function displayMealDetails(meal){
                     </div>
              
                     <h4 class="my-3">Tags  : </h4>
-                    <span class="tags ${meal.meals[0].strTags == null? 'd-none' : 'd-inline-block'}" >${meal.meals[0]?.strTags?.split(',')[0]}</span>
-                    <span class="tags ${meal.meals[0]?.strTags?.split(',')[1] == null? 'd-none' : 'd-inline-block'}" >${meal.meals[0]?.strTags?.split(',')[1]}</span>
-                    <span class="tags ${meal.meals[0]?.strTags?.split(',')[2] == null? 'd-none' : 'd-inline-block'}" >${meal.meals[0]?.strTags?.split(',')[2]}</span>
+                    <span class="tags alert-danger ${meal.meals[0].strTags == null? 'd-none' : 'd-inline-block'}" >${meal.meals[0]?.strTags?.split(',')[0]}</span>
+                    <span class="tags alert-danger ${meal.meals[0]?.strTags?.split(',')[1] == null? 'd-none' : 'd-inline-block'}" >${meal.meals[0]?.strTags?.split(',')[1]}</span>
+                    <span class="tags alert-danger ${meal.meals[0]?.strTags?.split(',')[2] == null? 'd-none' : 'd-inline-block'}" >${meal.meals[0]?.strTags?.split(',')[2]}</span>
                     
                     <br>
                     <a href="${meal.meals[0].strSource}" class="btn btn-success my-3 me-2">Source</a>

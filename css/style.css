@@ -1,12 +1,12 @@
 body{
     background-color: black;
 }
-.allMeals .item , .search-meal .item , .categories .item , .areas .item , .integrations .item{
+.allMeals .item{
   position: relative;
   overflow: hidden;
   border-radius: 8px;
 }
-.allMeals .item-inner , .search-meal .item-inner , .categories .item-inner , .areas .item-inner , .integrations .item-inner{
+.allMeals .item-inner{
     background-color: #ffffffb4;
     position: absolute;
     top: 100%;
@@ -16,11 +16,11 @@ body{
     opacity: 0;
     transition: all 0.5s;
 }
-.allMeals .item:hover .item-inner, .search-meal .item:hover .item-inner, .categories .item:hover .item-inner, .areas .item:hover .item-inner, .integrations .item:hover .item-inner{
+.allMeals .item:hover .item-inner{
     opacity: 1;
     top: 0;
 }
-.mealDetails .tags{
+.allMeals .tags{
     background-color: #F8D7DA;
     padding: 5px 10px;
     border-radius: 5px;
