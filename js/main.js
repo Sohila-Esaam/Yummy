@@ -149,7 +149,8 @@ async function searchByName(){
 
 // ==========display search by name function============
 function displaySearchByName(searchData){
-    let cartoona = `<div class="col-md-6">
+    let cartoona = `
+        <div class="col-md-6">
                     <div class="search-by-name">
                         <input oninput="searchByName()" id="searchName" class="form-control" type="text" placeholder="Search By Name">
                     </div>
@@ -163,7 +164,8 @@ function displaySearchByName(searchData){
                     <div class="row g-4 search-result">
     
                     </div>
-                </div>`;
+                </div>
+    `;
     for(let i = 0; i < searchData.length ; i++){
         cartoona += `
             <div class="col-md-3">
