@@ -2,6 +2,7 @@
 
 let allMeals = document.querySelector('.allMeals');
 let loading = document.querySelector('.loading');
+let meals = document.querySelector('.meals');
 
 // ==========get all meals function============
 async function getAllMeals(){
@@ -40,7 +41,7 @@ function displayMeals(mealsArray){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona
+    meals.innerHTML = cartoona
 }
 //===================================================
 
@@ -99,7 +100,7 @@ function displayMealDetails(meal){
                     <a href="${meal.meals[0].strYoutube}" class="btn btn-danger my-3">Youtube</a>
                 </div>
     `;
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 //===================================================
 
@@ -176,7 +177,7 @@ function displaySearchByName(searchData){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona
+    meals.innerHTML = cartoona
 }
 
 // ==========search by letter function============
@@ -230,7 +231,7 @@ function displaySearchByLetter(searchData){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona
+    meals.innerHTML = cartoona
 }
 
 function displaySearch(){
@@ -251,7 +252,7 @@ function displaySearch(){
                     </div>
                 </div>
     `
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 //====================end of search=======================
 
@@ -292,7 +293,7 @@ function displayCategories(allCategories){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 
 // ==========get categories details function============
@@ -330,7 +331,7 @@ function displayCategoriesDetails(Categories){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 
 //==================end of categories=======================
@@ -368,7 +369,7 @@ function displayAreas(areasData){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 
 // ==========get area details function============
@@ -405,7 +406,7 @@ function displayAreaDetails(areaData){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 
 //==================end of areas=======================
@@ -446,7 +447,7 @@ function displayIntegrations(integrationData){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 
 // ==========get integrations details function============
@@ -485,7 +486,7 @@ function displayIntegrationsDetails(integrationData){
                 </div>
         `
     }
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 
 //==================end of integrations=======================
@@ -520,12 +521,12 @@ function displayContactUs(){
                         <div class="alert alert-danger d-none my-3 alert-repassword">Enter valid password</div>
                     </div>
                     <div class="text-center mt-4">
-                        <button  id="btnSubmit" type="submit" disabled="true" >Submit</button>
+                        <button  id="btnSubmit" type="submit" disabled="true" class="" >Submit</button>
                     </div>
                 </div>
         </div>
     `
-    document.querySelector('.meals').innerHTML = cartoona;
+    meals.innerHTML = cartoona;
 }
 
 function validName(){
@@ -597,8 +598,8 @@ function validRepassword(){
 function inputsValidation(){
     if(validName() && validEmail() && validPhone() && validAge() && validPassword() && validRepassword()){
         document.getElementById('btnSubmit').disabled = false;
+        document.getElementById('btnSubmit').classList.add('btn', 'btn-danger')
         document.getElementById('btnSubmit').style.cssText = 'border-color: red !important';
-        console.log(document.getElementById('btnSubmit'));
     }else{
         document.getElementById('btnSubmit').disabled = true;
     }
